@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <title>TemplateMaster</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Minha Página Principal</title>
 </head>
-
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <div class="logo">Templates</div>
-  </header>
+    <button onclick="openModal()">Abrir Aplicativo</button>
 
-  <!-- Seção de Destaques -->
-  <section class="highlights">
-    <h2>Templates</h2>
-    <div class="category-buttons">
-      <button name="global" class="category-btn global">Global</button>
-      <button class="category-btn">Awating Validation </button>
-      <button class="category-btn">Awating Inputs</button>
-      <!-- Adicione mais botões para outras categorias -->
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe src="app.html" width="100%" height="100%"></iframe>
+        </div>
     </div>
-  </section>
 
-  <script src="script.js"></script>
+    <script>
+        function openModal() {
+            document.getElementById('myModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
 </body>
-
 </html>
